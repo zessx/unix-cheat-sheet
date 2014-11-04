@@ -19,17 +19,35 @@ $.expr[":"].contains = $.expr.createPseudo(function(arg) {
     };
 });
 
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+function searchFor(search) {
+    $('#tip').css('opacity', 0);
+    if(search != '') {
+        $('#tip').css('opacity', 1);
+    }
+    $('#search').val(search);
+    $('#search').data('old', search);
+    var terms = search.split(' ').join('):contains(');
+    $('#sheet tbody tr').hide();
+    $('#sheet tbody td:contains(' + terms + ')').parent().show();
+}
 
 $(function() {
 
-    $('#search').on('keyup change', function(event) {
-
-        var search = $(this).val();
-        var terms = search.split(' ').join('):contains(');
-
-        $('#sheet tr:not(:first-child)').hide();
-        $('#sheet td:contains(' + terms + ')').parent().show();
-
+    $('#search').on('propertychange keyup input paste', function(event) {
+        if(event.which == 27) {
+            searchFor('');
+        }
+        if($(this).data('old') != $(this).val()) {
+            searchFor($(this).val());
+        }
     });
+    searchFor(getParameterByName('s'));
 
 });

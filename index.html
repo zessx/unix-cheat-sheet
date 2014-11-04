@@ -4,104 +4,112 @@
     <meta charset="UTF-8">
     <title>Unix Cheat Sheet</title>
 
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="assets/css/app.min.css">
 </head>
 <body>
 
-    <h1>Unix Cheat Sheet</h1>
+    <section>
+        <h1>Unix Cheat Sheet</h1>
 
-    <input type="text" placeholder="Search" id="search">
+        <input type="text" placeholder="Rechercher" id="search" data-old="" autofocus>
+        <div id="tip">[ECHAP] pour effacer</div>
 
-    <table id="sheet">
+        <table id="sheet">
 
-        <tr>
-            <th>Commande</th>
-            <th>Détails</th>
-        </tr>
+            <thead>
+                <tr>
+                    <th>Commande</th>
+                    <th>Détails</th>
+                </tr>
+            </thead>
 
-        <!-- Dossiers -->
-        <tr>
-            <td><code>cd <dossier></code></td>
-            <td>Se déplacer dans un dossier</td>
-        </tr>
-        <tr>
-            <td><code>cd ~</code></td>
-            <td>Se déplacer dans le dossier de l'utilisateur courant</td>
-        </tr>
-        <tr>
-            <td><code>cd -</code></td>
-            <td>Retourner au dossier précédent</td>
-        </tr>
-        <tr>
-            <td><code>ls -la</code></td>
-            <td>Afficher le contenu du dossier courant, avec les fichier cachés</td>
-        </tr>
-        <tr>
-            <td><code>mkdir <dossier></code></td>
-            <td>Créer un dossier</td>
-        </tr>
-        <tr>
-            <td><code>rmdir <dossier></code></td>
-            <td>Supprimer un dossier vide</td>
-        </tr>
-        <tr>
-            <td><code>rm -rf <dossier></code></td>
-            <td>Forcer la suppression d'un dossier et son contenu</td>
-        </tr>
-        <tr>
-            <td><code>cp -r <source> <destination></code></td>
-            <td>Copier un dossier et son contenu</td>
-        </tr>
+            <tbody>
+                <!-- Dossiers -->
+                <tr>
+                    <td><code>cd <dossier></code></td>
+                    <td>Se déplacer dans un dossier</td>
+                </tr>
+                <tr>
+                    <td><code>cd ~</code></td>
+                    <td>Se déplacer dans le dossier de l'utilisateur courant</td>
+                </tr>
+                <tr>
+                    <td><code>cd -</code></td>
+                    <td>Retourner au dossier précédent</td>
+                </tr>
+                <tr>
+                    <td><code>ls -la</code></td>
+                    <td>Afficher le contenu du dossier courant, avec les fichier cachés</td>
+                </tr>
+                <tr>
+                    <td><code>mkdir <dossier></code></td>
+                    <td>Créer un dossier</td>
+                </tr>
+                <tr>
+                    <td><code>rmdir <dossier></code></td>
+                    <td>Supprimer un dossier vide</td>
+                </tr>
+                <tr>
+                    <td><code>rm -rf <dossier></code></td>
+                    <td>Forcer la suppression d'un dossier et son contenu</td>
+                </tr>
+                <tr>
+                    <td><code>cp -r <source> <destination></code></td>
+                    <td>Copier un dossier et son contenu</td>
+                </tr>
 
-        <!-- Fichiers -->
-        <tr>
-            <td><code>cat <fichier></code></td>
-            <td>Afficher le contenu d'un fichier</td>
-        </tr>
-        <tr>
-            <td><code>more <fichier></code></td>
-            <td>Afficher le contenu d'un fichier page par page (Espace/Entrée pour naviguer, Q pour quitter)</td>
-        </tr>
-        <tr>
-            <td><code>head <fichier></code></td>
-            <td>Afficher les 10 premières lignes du fichier</td>
-        </tr>
-        <tr>
-            <td><code>tail <fichier></code></td>
-            <td>Afficher les 10 dernières lignes du fichier</td>
-        </tr>
-        <tr>
-            <td><code>tail -f <fichier></code></td>
-            <td>Afficher les 10 dernières lignes du fichier en temps réel (Ctrl+C pour quitter)</td>
-        </tr>
-        <tr>
-            <td><code>touch <fichier></code></td>
-            <td>Créer un fichier</td>
-        </tr>
-        <tr>
-            <td><code>rm <fichier></code></td>
-            <td>Supprimer un fichier</td>
-        </tr>
-        <tr>
-            <td><code>rm -f <fichier></code></td>
-            <td>Forcer la suppression d'un fichier</td>
-        </tr>
-        <tr>
-            <td><code>cp <source> <destination></code></td>
-            <td>Copier un fichier</td>
-        </tr>
+                <!-- Fichiers -->
+                <tr>
+                    <td><code>cat <fichier></code></td>
+                    <td>Afficher le contenu d'un fichier</td>
+                </tr>
+                <tr>
+                    <td><code>more <fichier></code></td>
+                    <td>Afficher le contenu d'un fichier page par page (Espace/Entrée pour naviguer, Q pour quitter)</td>
+                </tr>
+                <tr>
+                    <td><code>head <fichier></code></td>
+                    <td>Afficher les 10 premières lignes du fichier</td>
+                </tr>
+                <tr>
+                    <td><code>tail <fichier></code></td>
+                    <td>Afficher les 10 dernières lignes du fichier</td>
+                </tr>
+                <tr>
+                    <td><code>tail -f <fichier></code></td>
+                    <td>Afficher les 10 dernières lignes du fichier en temps réel (Ctrl+C pour quitter)</td>
+                </tr>
+                <tr>
+                    <td><code>touch <fichier></code></td>
+                    <td>Créer un fichier</td>
+                </tr>
+                <tr>
+                    <td><code>rm <fichier></code></td>
+                    <td>Supprimer un fichier</td>
+                </tr>
+                <tr>
+                    <td><code>rm -f <fichier></code></td>
+                    <td>Forcer la suppression d'un fichier</td>
+                </tr>
+                <tr>
+                    <td><code>cp <source> <destination></code></td>
+                    <td>Copier un fichier</td>
+                </tr>
 
-        <!-- Éditeurs -->
-        <tr>
-            <td><code>nano <fichier></code></td>
-            <td>Éditer un fichier avec nano</td>
-        </tr>
-        <tr>
-            <td><code>vi <fichier></code></td>
-            <td>Éditer un fichier avec vi</td>
-        </tr>
+                <!-- Éditeurs -->
+                <tr>
+                    <td><code>nano <fichier></code></td>
+                    <td>Éditer un fichier avec nano</td>
+                </tr>
+                <tr>
+                    <td><code>vi <fichier></code></td>
+                    <td>Éditer un fichier avec vi</td>
+                </tr>
+            </tbody>
 
-    </table>
+        </table>
+    </section>
 
     <script src="vendor/jquery/jquery-1.11.1.min.js"></script>
     <script src="assets/js/app.min.js"></script>
