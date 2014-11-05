@@ -39,125 +39,239 @@
             </thead>
 
             <tbody>
+
                 <!-- Folders -->
                 <tr>
+                    <td><code>pwd</code></td>
+                    <td class="fr">Affiche le dossier courant</td>
+                    <td class="en">Displays working directory</td>
+                    <td class="keywords">folder répertoire navigation current</td>
+                </tr>
+                <tr>
                     <td><code>cd <i>[dir]</i></code></td>
-                    <td class="fr">Se déplacer dans un dossier</td>
-                    <td class="en">Change directory</td>
+                    <td class="fr">Change le dossier courant</td>
+                    <td class="en">Changes current directory</td>
                     <td class="keywords">folder répertoire navigation</td>
                 </tr>
                 <tr>
                     <td><code>cd ~</code></td>
-                    <td class="fr">Se déplacer dans le dossier de l'utilisateur courant</td>
-                    <td class="en">Change directory to your home directory</td>
+                    <td class="fr">Va dans le dossier de l'utilisateur courant</td>
+                    <td class="en">Changes directory to your home directory</td>
                     <td class="keywords">folder répertoire navigation</td>
                 </tr>
                 <tr>
                     <td><code>cd -</code></td>
-                    <td class="fr">Retourner au dossier précédent</td>
-                    <td class="en">Return to previous directory</td>
+                    <td class="fr">Retourne au dossier précédent</td>
+                    <td class="en">Returns to previous directory</td>
                     <td class="keywords">folder répertoire navigation historique history</td>
                 </tr>
                 <tr>
+                    <td><code>ls -l</code></td>
+                    <td class="fr">Affiche le contenu du dossier courant avec des détails</td>
+                    <td class="en">Lists contents of current directory with details</td>
+                    <td class="keywords">folder répertoire navigation droits rights</td>
+                </tr>
+                <tr>
                     <td><code>ls -la</code></td>
-                    <td class="fr">Afficher le contenu du dossier courant, avec les fichier cachés</td>
-                    <td class="en">List contents of current directory, including hidden contents</td>
+                    <td class="fr">Affiche le contenu du dossier courant avec des détails, incluant les commençant par .</td>
+                    <td class="en">Lists contents of current directory, including directories starting by .</td>
+                    <td class="keywords">folder répertoire navigation droits rights</td>
+                </tr>
+                <tr>
+                    <td><code>ls -lR</code></td>
+                    <td class="fr">Affiche le contenu du dossier courant de manière récursive</td>
+                    <td class="en">Recursively lists contents of current directory</td>
                     <td class="keywords">folder répertoire navigation</td>
                 </tr>
                 <tr>
                     <td><code>mkdir <i>[dir]</i></code></td>
-                    <td class="fr">Créer un dossier</td>
-                    <td class="en">Create a directory</td>
+                    <td class="fr">Crée un dossier</td>
+                    <td class="en">Creates a directory</td>
                     <td class="keywords">folder répertoire création</td>
                 </tr>
                 <tr>
                     <td><code>rmdir <i>[dir]</i></code></td>
-                    <td class="fr">Supprimer un dossier vide</td>
-                    <td class="en">Delete a directory</td>
+                    <td class="fr">Supprime un dossier vide</td>
+                    <td class="en">Deletes a directory</td>
                     <td class="keywords">folder répertoire suppression deletion</td>
                 </tr>
                 <tr>
                     <td><code>rm -rf <i>[dir]</i></code></td>
-                    <td class="fr">Forcer la suppression d'un dossier et son contenu</td>
-                    <td class="en">Delete a directory and its content</td>
+                    <td class="fr">Force la suppression d'un dossier et son contenu</td>
+                    <td class="en">Deletes a directory and its content</td>
                     <td class="keywords">folder répertoire suppression deletion</td>
                 </tr>
                 <tr>
-                    <td><code>cp -r <i>[src]</i> <i>[dest]</i></code></td>
-                    <td class="fr">Copier un dossier et son contenu</td>
-                    <td class="en">Copy a directory and its content</td>
-                    <td class="keywords">folder répertoire</td>
+                    <td><code>cp -r <i>[dir1]</i> <i>[dir2]</i></code></td>
+                    <td class="fr">Copie un dossier et son contenu</td>
+                    <td class="en">Copies a directory and its content</td>
+                    <td class="keywords">folder répertoire copier</td>
+                </tr>
+                <tr>
+                    <td><code>mv <i>[dir1]</i> <i>[dir2]</i></code></td>
+                    <td class="fr">Déplace un dossier</td>
+                    <td class="en">Moves a directory</td>
+                    <td class="keywords"></td>
+                </tr>
+                <tr>
+                    <td><code>mv <i>[dir]</i> <i>[newdir]</i></code></td>
+                    <td class="fr">Renomme un dossier</td>
+                    <td class="en">Renames a directory</td>
+                    <td class="keywords"></td>
                 </tr>
 
                 <!-- Files -->
                 <tr>
                     <td><code>cat <fichier></code></td>
-                    <td class="fr">Afficher le contenu d'un fichier</td>
-                    <td class="en">Display a whole file content</td>
+                    <td class="fr">Affiche le contenu d'un fichier</td>
+                    <td class="en">Displays a whole file content</td>
                     <td class="keywords">lecture read show</td>
                 </tr>
                 <tr>
                     <td><code>more <fichier></code></td>
-                    <td class="fr">Afficher le contenu d'un fichier page par page (Espace/Entrée pour naviguer, Q pour quitter)</td>
-                    <td class="en">Display file content, page per page (Escape/Enter to navigate, Q to exit)</td>
+                    <td class="fr">Affiche le contenu d'un fichier page par page (Espace/Entrée pour naviguer, Q pour quitter)</td>
+                    <td class="en">Displays file content, page per page (Escape/Enter to navigate, Q to exit)</td>
                     <td class="keywords">lecture read show</td>
                 </tr>
                 <tr>
                     <td><code>head <fichier></code></td>
-                    <td class="fr">Afficher les 10 premières lignes du fichier</td>
-                    <td class="en">Display the first 10 lines of a file</td>
+                    <td class="fr">Affiche les 10 premières lignes du fichier</td>
+                    <td class="en">Displays the first 10 lines of a file</td>
                     <td class="keywords">lecture read show</td>
                 </tr>
                 <tr>
                     <td><code>tail <fichier></code></td>
-                    <td class="fr">Afficher les 10 dernières lignes du fichier</td>
-                    <td class="en">Display the last 10 lines of a file</td>
+                    <td class="fr">Affiche les 10 dernières lignes du fichier</td>
+                    <td class="en">Displays the last 10 lines of a file</td>
                     <td class="keywords">lecture read show</td>
                 </tr>
                 <tr>
                     <td><code>tail -f <fichier></code></td>
-                    <td class="fr">Afficher les 10 dernières lignes du fichier en temps réel (Ctrl+C pour quitter)</td>
-                    <td class="en">Display the last 10 lines of a file in real time (Ctrl+C to exit)</td>
+                    <td class="fr">Affiche les 10 dernières lignes du fichier en temps réel (Ctrl+C pour quitter)</td>
+                    <td class="en">Displays the last 10 lines of a file in real time (Ctrl+C to exit)</td>
                     <td class="keywords">lecture read show</td>
                 </tr>
                 <tr>
                     <td><code>touch <fichier></code></td>
-                    <td class="fr">Créer un fichier</td>
-                    <td class="en">Create a file</td>
+                    <td class="fr">Crée un fichier</td>
+                    <td class="en">Creates a file</td>
                     <td class="keywords">création</td>
                 </tr>
                 <tr>
                     <td><code>rm <fichier></code></td>
-                    <td class="fr">Supprimer un fichier</td>
-                    <td class="en">Delete a file</td>
+                    <td class="fr">Supprime un fichier</td>
+                    <td class="en">Deletes a file</td>
                     <td class="keywords">deletion</td>
                 </tr>
                 <tr>
                     <td><code>rm -f <fichier></code></td>
-                    <td class="fr">Forcer la suppression d'un fichier</td>
-                    <td class="en">Force a file deletion</td>
+                    <td class="fr">Force la suppression d'un fichier</td>
+                    <td class="en">Forces a file deletion</td>
                     <td class="keywords"></td>
                 </tr>
                 <tr>
-                    <td><code>cp <i>[src]</i> <i>[dest]</i></code></td>
-                    <td class="fr">Copier un fichier</td>
-                    <td class="en">Copy a file</td>
+                    <td><code>cp <i>[file1]</i> <i>[file2]</i></code></td>
+                    <td class="fr">Copie un fichier</td>
+                    <td class="en">Copies a file</td>
                     <td class="keywords">copie</td>
+                </tr>
+                <tr>
+                    <td><code>mv <i>[file]</i> <i>[dir]</i></code></td>
+                    <td class="fr">Déplace un fichier</td>
+                    <td class="en">Moves a file</td>
+                    <td class="keywords"></td>
+                </tr>
+                <tr>
+                    <td><code>mv <i>[file]</i> <i>[newfile]</i></code></td>
+                    <td class="fr">Renomme un fichier</td>
+                    <td class="en">Renames a file</td>
+                    <td class="keywords"></td>
                 </tr>
 
                 <!-- Editors -->
                 <tr>
-                    <td><code>nano <fichier></code></td>
-                    <td class="fr">Éditer un fichier avec nano</td>
-                    <td class="en">Edit a file, using nano</td>
+                    <td><code>nano <i>[file]</i></code></td>
+                    <td class="fr">Édite un fichier avec nano</td>
+                    <td class="en">Edits a file, using nano</td>
                     <td class="keywords">édition éditeur editor</td>
                 </tr>
                 <tr>
-                    <td><code>vi <fichier></code></td>
-                    <td class="fr">Éditer un fichier avec vi</td>
-                    <td class="en">Edit a file, using vi</td>
+                    <td><code>vi <i>[file]</i></code></td>
+                    <td class="fr">Édite un fichier avec vi</td>
+                    <td class="en">Edits a file, using vi</td>
                     <td class="keywords">édition éditeur editor</td>
                 </tr>
+
+                <!-- Processes -->
+                <tr>
+                    <td><code>top</code></td>
+                    <td class="fr">Affiche tous les processus en cours d'exécution, et montre les ressources disponibles</td>
+                    <td class="en">Displays all the processes running on the machine, and shows available resources</td>
+                    <td class="keywords">process</td>
+                </tr>
+                <tr>
+                    <td><code>ps</code></td>
+                    <td class="fr">Affiche les processus actifs</td>
+                    <td class="en">Displays active processes</td>
+                    <td class="keywords">process</td>
+                </tr>
+                <tr>
+                    <td><code>kill <i>[pid]</i></code></td>
+                    <td class="fr">Tue un processus</td>
+                    <td class="en">Kill a process</td>
+                    <td class="keywords"></td>
+                </tr>
+
+                <!-- Rights -->
+                <tr>
+                    <td><code>chmod <i>[octal]</i> <i>[file]</i></code></td>
+                    <td class="fr">Change les permissions d'un fichier/dossier</td>
+                    <td class="en">Changes the permissions of a file/directory</td>
+                    <td class="keywords">répertoire droits rights</td>
+                </tr>
+                <tr>
+                    <td><code>chmod -R <i>[octal]</i> <i>[dir]</i></code></td>
+                    <td class="fr">Change les permissions d'un dossier de manière récursive</td>
+                    <td class="en">Recursively changes the permissions of a directory</td>
+                    <td class="keywords">répertoire droits rights</td>
+                </tr>
+
+                <!-- SSH -->
+                <tr>
+                    <td><code>ssh <i>[user]</i>@<i>[host]</i></code></td>
+                    <td class="fr">Se connecte à une machine en SSH</td>
+                    <td class="en">Connects to a host via SSH</td>
+                    <td class="keywords">hôte</td>
+                </tr>
+                <tr>
+                    <td><code>ssh -p <i>[port]</i> <i>[user]</i>@<i>[host]</i></code></td>
+                    <td class="fr">Se connecte à une machine en SSH sur un port défini</td>
+                    <td class="en">Connects to a host via SSH on a specified port</td>
+                    <td class="keywords">hôte</td>
+                </tr>
+
+                <!-- Date -->
+                <tr>
+                    <td><code>date</code></td>
+                    <td class="fr">Affiche la date et l'heure courante</td>
+                    <td class="en">Displays the current date and time</td>
+                    <td class="keywords">day hour minute second</td>
+                </tr>
+                <tr>
+                    <td><code>cal</code></td>
+                    <td class="fr">Affiche le calendrier du mois courant</td>
+                    <td class="en">Displays this month's calendar</td>
+                    <td class="keywords">date day</td>
+                </tr>
+
+                <!-- Help -->
+                <tr>
+                    <td><code>man <i>[command]</i></code></td>
+                    <td class="fr">Affiche la documentation d'une commande</td>
+                    <td class="en">Displays a command's manual</td>
+                    <td class="keywords">help aide</td>
+                </tr>
+
             </tbody>
 
         </table>
