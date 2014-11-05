@@ -67,14 +67,15 @@ function setCookie(name, value, days) {
 $(function() {
 
     var lang = getCookie('lang');
-    if(!lang) {
+    if(lang === null) {
         lang = 'en';
         setCookie('lang', lang);
     }
     $('body').addClass(lang);
 
-    $('data-lang').on('click', function() {
-        setCookie('lang', $(this).data('lang'));
+    $('[data-lang]').on('click', function() {
+        var lang = $(this).data('lang');
+        setCookie('lang', lang);
         $('body').removeClass().addClass(lang);
     });
 
