@@ -14,6 +14,5 @@ How to create an UCS Chrome search engine?
 TODO
 ----
 
-- i18n
 - tags for searching purpose
 

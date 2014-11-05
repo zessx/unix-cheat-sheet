@@ -1,9 +1,16 @@
 $foreground: #333;
 $background: #efefef;
+$langs: "en", "fr";
 
 * {
     box-sizing: border-box;
     transition: .2s;
+}
+
+@each $lang in $langs {
+    .#{$lang} {
+        display: none;
+    }
 }
 
 body {
@@ -12,6 +19,20 @@ body {
     color: $foreground;
     background: $background;
     overflow-y: scroll;
+
+    @each $lang in $langs {
+        &.#{$lang} {
+            display: block;
+
+            .#{$lang} {
+                display: block;
+            }
+            [data-lang="#{$lang}"] {
+                color: $background;
+                background: $foreground;
+            }
+        }
+    }
 }
 
 section {
@@ -24,6 +45,32 @@ section {
 h1 {
     text-align: center;
     margin: 25px auto;
+}
+
+.langs {
+    position: absolute;
+    top: 0;
+    right: 25px;
+
+    [data-lang] {
+        display: inline-block;
+        cursor: pointer;
+        font-size: 12px;
+        padding: 2px 5px;
+        float: left;
+        margin: 0 1px;
+        border: 1px solid $foreground;
+        border-top: none;
+        border-radius: 0 0 5px 5px;
+        color: $foreground;
+        background: $background;
+
+        &:hover,
+        &:focus {
+            color: $background;
+            background: $foreground;
+        }
+    }
 }
 
 input {
@@ -61,13 +108,16 @@ table {
 
         td,
         th {
-            width: 80%;
+            width: 70%;
             padding: 4px 10px;
             border-radius: 0 5px 0 0;
 
             &:first-child {
-                width: 20%;
+                width: 30%;
                 border-radius: 5px 0 0 0;
+            }
+            &.tags {
+                display: none;
             }
         }
         th {
@@ -95,6 +145,13 @@ table {
     }
 }
 
+code {
+    i {
+        font-style: italic;
+        color: lighten($foreground, 50%);
+    }
+}
+
 footer {
     position: fixed;
     bottom: 0;
@@ -117,9 +174,9 @@ footer {
     }
 }
 
-@media all and(min-width: 768px) {
+@media all and(min-width: 820px) {
     section {
-        width: 600px;
+        width: 800px;
     }
     input,
     #tip {

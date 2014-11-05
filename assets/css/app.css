@@ -2,12 +2,32 @@
   box-sizing: border-box;
   transition: .2s; }
 
+.en {
+  display: none; }
+
+.fr {
+  display: none; }
+
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   color: #333;
   background: #efefef;
   overflow-y: scroll; }
+  body.en {
+    display: block; }
+    body.en .en {
+      display: block; }
+    body.en [data-lang="en"] {
+      color: #efefef;
+      background: #333; }
+  body.fr {
+    display: block; }
+    body.fr .fr {
+      display: block; }
+    body.fr [data-lang="fr"] {
+      color: #efefef;
+      background: #333; }
 
 section {
   position: relative;
@@ -18,6 +38,26 @@ section {
 h1 {
   text-align: center;
   margin: 25px auto; }
+
+.langs {
+  position: absolute;
+  top: 0;
+  right: 25px; }
+  .langs [data-lang] {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 2px 5px;
+    float: left;
+    margin: 0 1px;
+    border: 1px solid #333;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    color: #333;
+    background: #efefef; }
+    .langs [data-lang]:hover, .langs [data-lang]:focus {
+      color: #efefef;
+      background: #333; }
 
 input {
   display: block;
@@ -47,13 +87,16 @@ table {
     z-index: 1; }
     table tr td,
     table tr th {
-      width: 80%;
+      width: 70%;
       padding: 4px 10px;
       border-radius: 0 5px 0 0; }
       table tr td:first-child,
       table tr th:first-child {
-        width: 20%;
+        width: 30%;
         border-radius: 5px 0 0 0; }
+      table tr td.tags,
+      table tr th.tags {
+        display: none; }
     table tr th {
       text-align: left;
       padding: 10px;
@@ -72,6 +115,10 @@ table {
     border-radius: 0 0 5px 5px;
     background: #f9f9f9; }
 
+code i {
+  font-style: italic;
+  color: #b3b3b3; }
+
 footer {
   position: fixed;
   bottom: 0;
@@ -88,9 +135,9 @@ footer {
     footer a:hover, footer a:focus {
       color: #bcbcbc; }
 
-@media all and (min-width: 768px) {
+@media all and (min-width: 820px) {
   section {
-    width: 600px; }
+    width: 800px; }
 
   input,
   #tip {

@@ -12,8 +12,16 @@
     <section>
         <h1>Unix Cheat Sheet</h1>
 
-        <input type="text" placeholder="Rechercher" id="search" data-old="" autofocus>
-        <div id="tip">[ECHAP] pour effacer</div>
+        <input type="text" placeholder="..." id="search" data-old="" autofocus>
+        <div id="tip">
+            <span class="fr">[ECHAP] pour effacer</span>
+            <span class="en">[ESCAPE] to clear</span>
+        </div>
+
+        <aside class="langs">
+            <span data-lang="fr">FR</span>
+            <span data-lang="en">EN</span>
+        </aside>
 
         <table id="sheet">
 
@@ -25,86 +33,105 @@
             </thead>
 
             <tbody>
-                <!-- Dossiers -->
+                <!-- Folders -->
                 <tr>
-                    <td><code>cd <dossier></code></td>
-                    <td>Se déplacer dans un dossier</td>
+                    <td><code>cd <i>[dir]</i></code></td>
+                    <td class="fr">Se déplacer dans un dossier</td>
+                    <td class="en">Change directory</td>
                 </tr>
                 <tr>
                     <td><code>cd ~</code></td>
-                    <td>Se déplacer dans le dossier de l'utilisateur courant</td>
+                    <td class="fr">Se déplacer dans le dossier de l'utilisateur courant</td>
+                    <td class="en">Change directory to your home directory</td>
                 </tr>
                 <tr>
                     <td><code>cd -</code></td>
-                    <td>Retourner au dossier précédent</td>
+                    <td class="fr">Retourner au dossier précédent</td>
+                    <td class="en">Return to previous directory</td>
                 </tr>
                 <tr>
                     <td><code>ls -la</code></td>
-                    <td>Afficher le contenu du dossier courant, avec les fichier cachés</td>
+                    <td class="fr">Afficher le contenu du dossier courant, avec les fichier cachés</td>
+                    <td class="en">List contents of current directory, including hidden contents</td>
                 </tr>
                 <tr>
-                    <td><code>mkdir <dossier></code></td>
-                    <td>Créer un dossier</td>
+                    <td><code>mkdir <i>[dir]</i></code></td>
+                    <td class="fr">Créer un dossier</td>
+                    <td class="en">Create a directory</td>
                 </tr>
                 <tr>
-                    <td><code>rmdir <dossier></code></td>
-                    <td>Supprimer un dossier vide</td>
+                    <td><code>rmdir <i>[dir]</i></code></td>
+                    <td class="fr">Supprimer un dossier vide</td>
+                    <td class="en">Delete a directory</td>
                 </tr>
                 <tr>
-                    <td><code>rm -rf <dossier></code></td>
-                    <td>Forcer la suppression d'un dossier et son contenu</td>
+                    <td><code>rm -rf <i>[dir]</i></code></td>
+                    <td class="fr">Forcer la suppression d'un dossier et son contenu</td>
+                    <td class="en">Delete a directory and its content</td>
                 </tr>
                 <tr>
-                    <td><code>cp -r <source> <destination></code></td>
-                    <td>Copier un dossier et son contenu</td>
+                    <td><code>cp -r <i>[src]</i> <i>[dest]</i></code></td>
+                    <td class="fr">Copier un dossier et son contenu</td>
+                    <td class="en">Copy a directory and its content</td>
                 </tr>
 
-                <!-- Fichiers -->
+                <!-- Files -->
                 <tr>
                     <td><code>cat <fichier></code></td>
-                    <td>Afficher le contenu d'un fichier</td>
+                    <td class="fr">Afficher le contenu d'un fichier</td>
+                    <td class="en">Display a whole file content</td>
                 </tr>
                 <tr>
                     <td><code>more <fichier></code></td>
-                    <td>Afficher le contenu d'un fichier page par page (Espace/Entrée pour naviguer, Q pour quitter)</td>
+                    <td class="fr">Afficher le contenu d'un fichier page par page (Espace/Entrée pour naviguer, Q pour quitter)</td>
+                    <td class="en">Display file content, page per page (Escape/Enter to navigate, Q to exit)</td>
                 </tr>
                 <tr>
                     <td><code>head <fichier></code></td>
-                    <td>Afficher les 10 premières lignes du fichier</td>
+                    <td class="fr">Afficher les 10 premières lignes du fichier</td>
+                    <td class="en">Display the first 10 lines of a file</td>
                 </tr>
                 <tr>
                     <td><code>tail <fichier></code></td>
-                    <td>Afficher les 10 dernières lignes du fichier</td>
+                    <td class="fr">Afficher les 10 dernières lignes du fichier</td>
+                    <td class="en">Display the last 10 lines of a file</td>
                 </tr>
                 <tr>
                     <td><code>tail -f <fichier></code></td>
-                    <td>Afficher les 10 dernières lignes du fichier en temps réel (Ctrl+C pour quitter)</td>
+                    <td class="fr">Afficher les 10 dernières lignes du fichier en temps réel (Ctrl+C pour quitter)</td>
+                    <td class="en">Display the last 10 lines of a file in real time (Ctrl+C to exit)</td>
                 </tr>
                 <tr>
                     <td><code>touch <fichier></code></td>
-                    <td>Créer un fichier</td>
+                    <td class="fr">Créer un fichier</td>
+                    <td class="en">Create a file</td>
                 </tr>
                 <tr>
                     <td><code>rm <fichier></code></td>
-                    <td>Supprimer un fichier</td>
+                    <td class="fr">Supprimer un fichier</td>
+                    <td class="en">Delete a file</td>
                 </tr>
                 <tr>
                     <td><code>rm -f <fichier></code></td>
-                    <td>Forcer la suppression d'un fichier</td>
+                    <td class="fr">Forcer la suppression d'un fichier</td>
+                    <td class="en">Force a file deletion</td>
                 </tr>
                 <tr>
-                    <td><code>cp <source> <destination></code></td>
-                    <td>Copier un fichier</td>
+                    <td><code>cp <i>[src]</i> <i>[dest]</i></code></td>
+                    <td class="fr">Copier un fichier</td>
+                    <td class="en">Copy a file</td>
                 </tr>
 
-                <!-- Éditeurs -->
+                <!-- Editors -->
                 <tr>
                     <td><code>nano <fichier></code></td>
-                    <td>Éditer un fichier avec nano</td>
+                    <td class="fr">Éditer un fichier avec nano</td>
+                    <td class="en">Edit a file, using nano</td>
                 </tr>
                 <tr>
                     <td><code>vi <fichier></code></td>
-                    <td>Éditer un fichier avec vi</td>
+                    <td class="fr">Éditer un fichier avec vi</td>
+                    <td class="en">Edit a file, using vi</td>
                 </tr>
             </tbody>
 

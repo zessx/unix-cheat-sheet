@@ -38,7 +38,45 @@ function searchFor(search) {
     $('#sheet tbody td:contains(' + terms + ')').parent().show();
 }
 
+function setCookie(name, value, days) {
+    if(days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        var expires = '; expires=' + date.toGMTString();
+    } else {
+        var expires = '';
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+}
+
+ function getCookie(name) {
+    name += "=";
+    var cookies = document.cookie.split(';');
+    for(var i = 0, n = cookies.length; i < n; i++) {
+        var cookie = cookies[i];
+        while (cookie.charAt(0) == ' ') {
+            cookie = cookie.substring(1, cookie.length);
+        }
+        if (cookie.indexOf(name) == 0) {
+            return cookie.substring(name.length, cookie.length);
+        }
+    }
+    return null;
+}
+
 $(function() {
+
+    var lang = getCookie('lang');
+    if(!lang) {
+        lang = 'en';
+        setCookie('lang', lang);
+    }
+    $('body').addClass(lang);
+
+    $('data-lang').on('click', function() {
+        setCookie('lang', $(this).data('lang'));
+        $('body').removeClass().addClass(lang);
+    });
 
     $('#search').on('propertychange keyup input paste', function(event) {
         if(event.which == 27) {
