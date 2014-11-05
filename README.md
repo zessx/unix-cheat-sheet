@@ -15,4 +15,5 @@ TODO
 ----
 
 - i18n
+- tags for searching purpose
 
