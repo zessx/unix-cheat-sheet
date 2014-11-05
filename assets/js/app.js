@@ -31,7 +31,9 @@ function searchFor(search) {
     if(search != '') {
         $('#tip').css('opacity', 1);
     }
-    $('#search').val(search);
+    if($('#search').val() != search) {
+        $('#search').val(search);
+    }
     $('#search').data('old', search);
     var terms = search.split(' ').join('):contains(');
     $('#sheet tbody tr').hide();
