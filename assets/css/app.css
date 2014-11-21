@@ -87,12 +87,12 @@ table {
     z-index: 1; }
     table tr td,
     table tr th {
-      width: 70%;
+      width: 100%;
       padding: 4px 10px;
       border-radius: 0 5px 0 0; }
       table tr td:first-child,
       table tr th:first-child {
-        width: 30%;
+        width: 40%;
         border-radius: 5px 0 0 0; }
       table tr td.keywords,
       table tr th.keywords {
