@@ -295,13 +295,27 @@
                     <td class="en">Displays a command's manual</td>
                     <td class="keywords">help aide</td>
                 </tr>
-                
+
                 <!-- Apache -->
                 <tr>
                     <td><code>apachectl -k restart</code></td>
                     <td class="fr">Redémarre le serveur Apache</td>
                     <td class="en">Restart Apache server</td>
                     <td class="keywords"></td>
+                </tr>
+
+                <!-- PostgreSQL -->
+                <tr>
+                    <td><code>pg_dump -c -U <i>[username]</i> <i>[dbname]</i> > <i>[outfile]</i></code></td>
+                    <td class="fr">Sauvegarde une base de données PostgreSQL (au format SQL)</td>
+                    <td class="en">Backup a PostgreSQL database (SQL format)</td>
+                    <td class="keywords">dump bdd</td>
+                </tr>
+                <tr>
+                    <td><code>psql -U <i>[username]</i> -d <i>[dbname]</i> -f <i>[infile]</i></code></td>
+                    <td class="fr">Restaure une base de données PostgreSQL (au format SQL)</td>
+                    <td class="en">Restore a PostgreSQL database (SQL format)</td>
+                    <td class="keywords">backup bdd</td>
                 </tr>
 
             </tbody>
