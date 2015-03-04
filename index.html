@@ -298,9 +298,21 @@
 
                 <!-- Apache -->
                 <tr>
-                    <td><code>apachectl -k restart</code></td>
+                    <td><code>apachectl configtest</code></td>
+                    <td class="fr">Vérifie la configuration du serveur Apache</td>
+                    <td class="en">Check Apache server's configuration</td>
+                    <td class="keywords"></td>
+                </tr>
+                <tr>
+                    <td><code>apachectl restart</code></td>
                     <td class="fr">Redémarre le serveur Apache</td>
                     <td class="en">Restart Apache server</td>
+                    <td class="keywords"></td>
+                </tr>
+                <tr>
+                    <td><code>apachectl graceful</code></td>
+                    <td class="fr">Redémarre le serveur Apache en préservant les connections</td>
+                    <td class="en">Restart Apache server, preserving connections</td>
                     <td class="keywords"></td>
                 </tr>
 
