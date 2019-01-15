@@ -357,6 +357,50 @@
                     <td class="en">Shows available space on the disk</td>
                     <td class="keywords">disk disque espace space</td>
                 </tr>
+                <tr>
+                    <td><code>df -i</code></td>
+                    <td class="fr">Affiche les inodes disponible sur le disque</td>
+                    <td class="en">Shows available inodes on the disk</td>
+                    <td class="keywords">disk disque espace space inodes</td>
+                </tr>
+                <tr>
+                    <td><code>du -shk <i>[folder]</i></code></td>
+                    <td class="fr">Affiche la taille d'un dossier</td>
+                    <td class="en">Shows the folder's size</td>
+                    <td class="keywords">disk disque taille size dossier folder</td>
+                </tr>
+
+                <!-- Search -->
+                <tr>
+                    <td><code>find <i>[folder]</i> -type f</code></td>
+                    <td class="fr">Recherche tous les fichiers dans un dossier</td>
+                    <td class="en">Search all files in a directory</td>
+                    <td class="keywords">search recherche fichier file</td>
+                </tr>
+                <tr>
+                    <td><code>find <i>[folder]</i> -type d</code></td>
+                    <td class="fr">Recherche tous les dossiers dans un dossier</td>
+                    <td class="en">Search all directories in a directory</td>
+                    <td class="keywords">search recherche folder dossier</td>
+                </tr>
+                <tr>
+                    <td><code>find <i>[folder]</i> -user -<i>[user]</i></code></td>
+                    <td class="fr">Recherche tous les éléments avec ce propriétaire dans un dossier</td>
+                    <td class="en">Search all elements with this owner in a directory</td>
+                    <td class="keywords">search recherche droits rights propriétaire owner</td>
+                </tr>
+                <tr>
+                    <td><code>find <i>[folder]</i> -perm -<i>[octal]</i></code></td>
+                    <td class="fr">Recherche tous les éléments avec ces permissions dans un dossier</td>
+                    <td class="en">Search all elements with these permissions in a directory</td>
+                    <td class="keywords">search recherche droits rights</td>
+                </tr>
+                <tr>
+                    <td><code>find <i>[folder]</i> -perm /<i>[mask]</i></code></td>
+                    <td class="fr">Recherche tous les éléments dont les permissions correspondent à ce masque dans un dossier</td>
+                    <td class="en">Search all elements whose permissions match this mask in a directory</td>
+                    <td class="keywords">search recherche droits rights</td>
+                </tr>
 
             </tbody>
 
