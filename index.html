@@ -128,49 +128,49 @@
 
                 <!-- Files -->
                 <tr>
-                    <td><code>cat <fichier></code></td>
+                    <td><code>cat <i>[file]</i></code></td>
                     <td class="fr">Affiche le contenu d'un fichier</td>
                     <td class="en">Displays a whole file content</td>
                     <td class="keywords">lecture read show</td>
                 </tr>
                 <tr>
-                    <td><code>more <fichier></code></td>
+                    <td><code>more <i>[file]</i></code></td>
                     <td class="fr">Affiche le contenu d'un fichier page par page (Espace/Entrée pour naviguer, Q pour quitter)</td>
                     <td class="en">Displays file content, page per page (Escape/Enter to navigate, Q to exit)</td>
                     <td class="keywords">lecture read show</td>
                 </tr>
                 <tr>
-                    <td><code>head <fichier></code></td>
+                    <td><code>head <i>[file]</i></code></td>
                     <td class="fr">Affiche les 10 premières lignes du fichier</td>
                     <td class="en">Displays the first 10 lines of a file</td>
                     <td class="keywords">lecture read show</td>
                 </tr>
                 <tr>
-                    <td><code>tail <fichier></code></td>
+                    <td><code>tail <i>[file]</i></code></td>
                     <td class="fr">Affiche les 10 dernières lignes du fichier</td>
                     <td class="en">Displays the last 10 lines of a file</td>
                     <td class="keywords">lecture read show</td>
                 </tr>
                 <tr>
-                    <td><code>tail -f <fichier></code></td>
+                    <td><code>tail -f <i>[file]</i></code></td>
                     <td class="fr">Affiche les 10 dernières lignes du fichier en temps réel (Ctrl+C pour quitter)</td>
                     <td class="en">Displays the last 10 lines of a file in real time (Ctrl+C to exit)</td>
                     <td class="keywords">lecture read show</td>
                 </tr>
                 <tr>
-                    <td><code>touch <fichier></code></td>
+                    <td><code>touch <i>[file]</i></code></td>
                     <td class="fr">Crée un fichier</td>
                     <td class="en">Creates a file</td>
                     <td class="keywords">création</td>
                 </tr>
                 <tr>
-                    <td><code>rm <fichier></code></td>
+                    <td><code>rm <i>[file]</i></code></td>
                     <td class="fr">Supprime un fichier</td>
                     <td class="en">Deletes a file</td>
                     <td class="keywords">deletion</td>
                 </tr>
                 <tr>
-                    <td><code>rm -f <fichier></code></td>
+                    <td><code>rm -f <i>[file]</i></code></td>
                     <td class="fr">Force la suppression d'un fichier</td>
                     <td class="en">Forces a file deletion</td>
                     <td class="keywords"></td>
@@ -202,13 +202,13 @@
 
                 <!-- Archives -->
                 <tr>
-                    <td><code>zip -r <i>[fichier]</i>.zip <i>[dossier]</i></code></td>
+                    <td><code>zip -r <i>[file]</i>.zip <i>[folder]</i></code></td>
                     <td class="fr">Archive le contenu d'un dossier dans un .zip</td>
                     <td class="en">Archive a folder content in a .zip</td>
                     <td class="keywords">file archive fichier</td>
                 </tr>
                 <tr>
-                    <td><code>unzip <i>[fichier]</i>.zip -d <i>[dossier]</i></code></td>
+                    <td><code>unzip <i>[file]</i>.zip -d <i>[folder]</i></code></td>
                     <td class="fr">Extrait le contenu d'un .zip dans un dossier</td>
                     <td class="en">Extract a .zip content in a folder</td>
                     <td class="keywords">file archive fichier</td>
@@ -400,6 +400,14 @@
                     <td class="fr">Recherche tous les éléments dont les permissions correspondent à ce masque dans un dossier</td>
                     <td class="en">Search all elements whose permissions match this mask in a directory</td>
                     <td class="keywords">search recherche droits rights</td>
+                </tr>
+
+                <!-- Network -->
+                <tr>
+                    <td><code>host -v -t <i>[dnsrecord]</i> <i>[domain]</i></code></td>
+                    <td class="fr">Vérifie le TTL d'un enregistrement DNS</td>
+                    <td class="en">Check a DNS record TTL</td>
+                    <td class="keywords">network réseau dns ttl</td>
                 </tr>
 
             </tbody>
