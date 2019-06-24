@@ -410,6 +410,56 @@
                     <td class="keywords">network réseau dns ttl</td>
                 </tr>
 
+                <!-- Users and groups -->
+                <tr>
+                    <td><code>cat /etc/passwd | cut -d: -f1</code></td>
+                    <td class="fr">Liste tous les utilisateurs</td>
+                    <td class="en">List all users</td>
+                    <td class="keywords">utilisateur user groupe group</td>
+                </tr>
+                <tr>
+                    <td><code>groups <i>[user]</i></code></td>
+                    <td class="fr">Affiche les groupes d'un utilisateur</td>
+                    <td class="en">List an user's groups</td>
+                    <td class="keywords">utilisateur user groupe group</td>
+                </tr>
+                <tr>
+                    <td><code>useradd -m <i>[user]</i></code></td>
+                    <td class="fr">Ajoute un utilisateur</td>
+                    <td class="en">Create an user</td>
+                    <td class="keywords">utilisateur user groupe group</td>
+                </tr>
+                <tr>
+                    <td><code>passwd <i>[user]</i></code></td>
+                    <td class="fr">Change le mot de passe d'un utilisateur</td>
+                    <td class="en">Change an user's password</td>
+                    <td class="keywords">utilisateur user groupe group password passe</td>
+                </tr>
+                <tr>
+                    <td><code>getent group  | cut -d: -f1</code></td>
+                    <td class="fr">Liste tous les groupes</td>
+                    <td class="en">List all groups</td>
+                    <td class="keywords">utilisateur user groupe group</td>
+                </tr>
+                <tr>
+                    <td><code>usermod -a -G <i>[group]</i> -m <i>[user]</i></code></td>
+                    <td class="fr">Assigne un groupe secondaire à un utilisateur</td>
+                    <td class="en">Assign an user to a secondary group</td>
+                    <td class="keywords">utilisateur user groupe group</td>
+                </tr>
+                <tr>
+                    <td><code>usermod -g <i>[group]</i> -m <i>[user]</i></code></td>
+                    <td class="fr">Change le groupe primaire d'un utilisateur</td>
+                    <td class="en">Change an user's primary group</td>
+                    <td class="keywords">utilisateur user groupe group shell</td>
+                </tr>
+                <tr>
+                    <td><code>chsh -s /bin/<i>[shell]</i> <i>[user]</i></code></td>
+                    <td class="fr">Change le shell d'un utilisateur</td>
+                    <td class="en">Change an user's shell</td>
+                    <td class="keywords">utilisateur user groupe group shell</td>
+                </tr>
+
             </tbody>
 
         </table>
