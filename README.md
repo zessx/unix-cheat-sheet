@@ -25,3 +25,14 @@ Feel free to open [issues](https://github.com/zessx/unix-cheat-sheet/issues) if 
 - the requested command [with specified parameters](#what-is-not-ucs)
 - the description, at least in english
 - eventual keywords
+
+Development
+--------------------
+UCS use Vue CLI, therefore the following commands are available:  
+```sh
+yarn install
+yarn serve
+yarn build
+yarn test
+yarn lint
+```
