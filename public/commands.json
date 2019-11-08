@@ -1,0 +1,301 @@
+{
+    "folders_current": {
+      "code": "pwd",
+      "tags": ["folder", "répertoire", "navigation", "current"]
+    },
+    "folders_go_home": {
+      "code": "cd",
+      "tags": ["folder", "répertoire", "navigation"]
+    },
+    "folders_go": {
+      "code": "cd <i>[dir]</i>",
+      "tags": ["folder", "répertoire", "navigation"]
+    },
+    "folders_go_previous": {
+      "code": "cd -",
+      "tags": ["folder", "répertoire", "navigation", "historique", "history"]
+    },
+    "folders_list": {
+      "code": "ls -l",
+      "tags": ["folder", "répertoire", "navigation", "droits", "rights"]
+    },
+    "folders_list_all": {
+      "code": "ls -la",
+      "tags": ["folder", "répertoire", "navigation", "droits", "rights"]
+    },
+    "folders_list_recursive": {
+      "code": "ls -lR",
+      "tags": ["folder", "répertoire", "navigation"]
+    },
+    "folders_create": {
+      "code": "mkdir <i>[dir]</i>",
+      "tags": ["folder", "répertoire", "création"]
+    },
+    "folders_remove": {
+      "code": "rmdir <i>[dir]</i>",
+      "tags": ["folder", "répertoire", "suppression", "deletion"]
+    },
+    "folder_remove_recursive": {
+      "code": "rm -rf <i>[dir]</i>",
+      "tags": ["folder", "répertoire", "suppression", "deletion"]
+    },
+    "folders_copy": {
+      "code": "cp -r <i>[dir1]</i> <i>[dir2]</i>",
+      "tags": ["folder", "répertoire", "copier"]
+    },
+    "folders_move": {
+      "code": "mv <i>[dir]</i> <i>[newdir]</i>",
+      "tags": ["folder", "répertoire", "déplacer", "replace"]
+    },
+
+
+    "files_content": {
+      "code": "cat <i>[file]</i>",
+      "tags": ["lecture", "read", "show"]
+    },
+    "files_content_page": {
+      "code": "more <i>[file]</i>",
+      "tags": ["lecture", "read", "show"]
+    },
+    "files_content_start": {
+      "code": "head <i>[file]</i>",
+      "tags": ["lecture", "read", "show"]
+    },
+    "files_content_end": {
+      "code": "tail <i>[file]</i>",
+      "tags": ["lecture", "read", "show"]
+    },
+    "files_content_realtime": {
+      "code": "tail -f <i>[file]</i>",
+      "tags": ["lecture", "read", "show"]
+    },
+    "files_create": {
+      "code": "touch <i>[file]</i>",
+      "tags": ["création"]
+    },
+    "files_remove": {
+      "code": "rm <i>[file]</i>",
+      "tags": ["deletion"]
+    },
+    "files_remove_force": {
+      "code": "rm -f <i>[file]</i>"
+    },
+    "files_copy": {
+      "code": "cp <i>[file1]</i> <i>[file2]</i>",
+      "tags": ["copie"]
+    },
+    "files_move": {
+      "code": "mv <i>[file]</i> <i>[dir]</i>"
+    },
+    "files_symlink_create": {
+      "code": "ln -s <i>[target]</i> <i>[name]</i>",
+      "tags": ["file", "fichier"]
+    },
+    "files_symlink_update": {
+      "code": "ln -sfn <i>[target]</i> <i>[name]</i>",
+      "tags": ["file", "fichier"]
+    },
+
+
+    "archives_zip_create": {
+      "code": "zip -r <i>[file]</i>.zip <i>[folder]</i>",
+      "tags": ["file", "archive", "fichier"]
+    },
+    "archives_zip_extract": {
+      "code": "unzip <i>[file]</i>.zip -d <i>[folder]</i>",
+      "tags": ["file", "archive", "fichier", "extract"]
+    },
+    "archives_tar_create": {
+      "code": "tar czvf <i>[file]</i>.tar.gz <i>[folder]</i>",
+      "tags": ["file", "archive", "fichier", "compress"]
+    },
+    "archives_tar_extract": {
+      "code": "tar xzvf <i>[file]</i>.tar.gz",
+      "tags": ["file", "archive", "fichier", "extract"]
+    },
+
+
+    "editors_nano": {
+      "code": "nano <i>[file]</i>",
+      "tags": ["édition", "éditeur", "editor"]
+    },
+    "editors_vi": {
+      "code": "vi <i>[file]</i>",
+      "tags": ["édition", "éditeur", "editor"]
+    },
+
+
+    "processes_resources": {
+      "code": "top",
+      "tags": ["process"]
+    },
+    "processes_list": {
+      "code": "ps",
+      "tags": ["process"]
+    },
+    "processes_kill": {
+      "code": "kill <i>[pid]</i>"
+    },
+
+
+    "rights_permissions": {
+      "code": "chmod <i>[octal]</i> <i>[file]</i>",
+      "tags": ["répertoire", "droits", "rights"]
+    },
+    "rights_permissions_recursive": {
+      "code": "chmod -R <i>[octal]</i> <i>[dir]</i>",
+      "tags": ["répertoire", "droits", "rights"]
+    },
+    "rights_owner": {
+      "code": "chown <i>[user]</i>:<i>[group]</i> <i>[file]</i>",
+      "tags": ["répertoire", "droits", "rights"]
+    },
+    "rights_owner_recursive": {
+      "code": "chown -R <i>[user]</i>:<i>[group]</i> <i>[dir]</i>",
+      "tags": ["répertoire", "droits", "rights"]
+    },
+
+
+    "ssh_connect": {
+      "code": "ssh <i>[user]</i>@<i>[host]</i>",
+      "tags": ["hôte"]
+    },
+    "ssh_connect_port": {
+      "code": "ssh -p <i>[port]</i> <i>[user]</i>@<i>[host]</i>",
+      "tags": ["hôte"]
+    },
+    "ssh_copy": {
+      "code": "scp <i>[file]</i> <i>[user]</i>@<i>[host]</i>:<i>[dir]</i>",
+      "tags": ["copier", "distant"]
+    },
+    "ssh_copy_recursive": {
+      "code": "scp -r <i>[dir1]</i> <i>[user]</i>@<i>[host]</i>:<i>[dir2]</i>",
+      "tags": ["répertoire", "copier", "distant"]
+    },
+
+
+    "date_now": {
+      "code": "date",
+      "tags": ["day", "hour", "minute", "second"]
+    },
+    "date_calendar": {
+      "code": "cal",
+      "tags": ["date", "day"]
+    },
+
+
+    "tools_bash_reload": {
+      "code": "bash",
+      "tags": ["reset"]
+    },
+    "tools_manual": {
+      "code": "man <i>[command]</i>",
+      "tags": ["help", "aide"]
+    },
+
+
+    "webservers_apache_configtest": {
+      "code": "apachectl configtest",
+      "tags": ["webserver"]
+    },
+    "webservers_apache_restart": {
+      "code": "apachectl restart",
+      "tags": ["webserver"]
+    },
+    "webservers_apache_graceful": {
+      "code": "apachectl graceful",
+      "tags": ["webserver"]
+    },
+
+
+    "sql_pg_dump": {
+      "code": "pg_dump -c -U <i>[username]</i> <i>[dbname]</i> &gt; <i>[outfile]</i>",
+      "tags": ["dump", "bdd"]
+    },
+    "sql_pg_restore": {
+      "code": "psql -U <i>[username]</i> -d <i>[dbname]</i> &lt; <i>[infile]</i>",
+      "tags": ["backup", "bdd"]
+    },
+
+
+    "disk_space": {
+      "code": "df -h",
+      "tags": ["disk", "disque", "espace", "space"]
+    },
+    "disk_inodes": {
+      "code": "df -i",
+      "tags": ["disk", "disque", "espace", "space", "inodes"]
+    },
+    "disk_size": {
+      "code": "du -shk <i>[folder]</i>",
+      "tags": ["disk", "disque", "taille", "size", "dossier", "folder"]
+    },
+
+
+    "search_file": {
+      "code": "find <i>[folder]</i> -type f",
+      "tags": ["search", "recherche", "fichier", "file"]
+    },
+    "search_folder": {
+      "code": "find <i>[folder]</i> -type d",
+      "tags": ["search", "recherche", "folder", "dossier"]
+    },
+    "search_owner": {
+      "code": "find <i>[folder]</i> -user -<i>[user]</i>",
+      "tags": ["search", "recherche", "droits", "rights", "propriétaire", "owner"]
+    },
+    "search_permissions": {
+      "code": "find <i>[folder]</i> -perm -<i>[octal]</i>",
+      "tags": ["search", "recherche", "droits", "rights"]
+    },
+    "search_permissions_mask": {
+      "code": "find <i>[folder]</i> -perm /<i>[mask]</i>\nen: Search all elements whose permissions match this mask in a directory",
+      "tags": ["search", "recherche", "droits", "rights"]
+    },
+
+
+    "network_dns": {
+      "code": "host -v -t <i>[dnsrecord]</i> <i>[domain]</i>",
+      "tags": ["network", "réseau", "dns", "ttl"]
+    },
+    "network_port": {
+      "code": "nc -zv <i>[host]</i> <i>[port]</i>",
+      "tags": ["network", "réseau", "tcp", "port"]
+    },
+
+
+    "users_list": {
+      "code": "cat /etc/passwd | cut -d: -f1",
+      "tags": ["utilisateur", "user", "groupe", "group"]
+    },
+    "users_groups": {
+      "code": "groups <i>[user]</i>",
+      "tags": ["utilisateur", "user", "groupe", "group"]
+    },
+    "users_add": {
+      "code": "useradd -m <i>[user]</i>",
+      "tags": ["utilisateur", "user", "groupe", "group"]
+    },
+    "users_password": {
+      "code": "passwd <i>[user]</i>",
+      "tags": ["utilisateur", "user", "groupe", "group", "password", "passe"]
+    },
+    "users_group_secondary": {
+      "code": "usermod -a -G <i>[group]</i> -m <i>[user]</i>",
+      "tags": ["utilisateur", "user", "groupe", "group"]
+    },
+    "users_group_primary": {
+      "code": "usermod -g <i>[group]</i> -m <i>[user]</i>",
+      "tags": ["utilisateur", "user", "groupe", "group", "shell"]
+    },
+    "users_shell": {
+      "code": "chsh -s /bin/<i>[shell]</i> <i>[user]</i>",
+      "tags": ["utilisateur", "user", "groupe", "group", "shell"]
+    },
+
+
+    "groups_list": {
+      "code": "getent group  | cut -d: -f1",
+      "tags": ["utilisateur", "user", "groupe", "group"]
+    }
+}

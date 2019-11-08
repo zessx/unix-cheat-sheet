@@ -9,8 +9,8 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
-    "js-yaml": "^3.13.1",
     "vue": "^2.6.10",
+    "vue-i18n": "^8.15.0",
     "vue-resource": "^1.5.1"
   },
   "devDependencies": {

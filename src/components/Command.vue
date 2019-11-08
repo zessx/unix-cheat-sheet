@@ -3,8 +3,8 @@
         <td>
             <code>{{ code }}</code>
         </td>
-        <td v-for="(message, langcode) in messages" :key="langcode" :class=langcode>
-            {{ message }}
+        <td>
+            {{ $t("command." + name) }}
         </td>
         <td class="tags">
             <span v-for="tag in tags" :key="tag">{{ tag }}</span>
@@ -17,18 +17,9 @@ export default {
     name: 'Command',
 
     props: {
+        name: String,
         code: String,
-        messages: Object,
         tags: Array
-    },
-
-    mounted() {
-        let commands = [];
-
-        Vue.http.get('commands.yml')
-        .then(response => {
-            commands = yaml.safeLoad(response.data)
-        })
     }
 }
 </script>

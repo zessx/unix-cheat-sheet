@@ -2,45 +2,35 @@
     <div id="app">
 
         <section>
-            <h1>Unix Cheat Sheet</h1>
+            <h1>{{ $t("message.title") }}</h1>
 
             <input type="text" placeholder="..." id="search" data-old="" autofocus>
-            <div id="tip">
-                <span class="fr">[ECHAP] pour effacer</span>
-                <span class="en">[ESCAPE] to clear</span>
-            </div>
+            <div id="tip">{{ $t("message.escape_to_erase") }}</div>
 
             <aside class="langs">
-                <span data-lang="fr">FR</span>
-                <span data-lang="en">EN</span>
+                <select v-model="$i18n.locale">
+                    <option v-for="(lang, key) in langs" :key="`Lang${key}`" :value="lang">{{ lang | uppercase }}</option>
+                </select>
             </aside>
 
             <table id="sheet">
 
                 <thead>
                     <tr>
-                        <th>
-                            <span class="fr">Commande</span>
-                            <span class="en">Command</span>
-                        </th>
-                        <th>
-                            <span class="fr">Description</span>
-                            <span class="en">Description</span>
-                        </th>
+                        <th>{{ $t("message.command") }}</th>
+                        <th>{{ $t("message.description") }}</th>
                     </tr>
                 </thead>
 
                 <tbody>
-                    <Command code="test" messages="{fr:'Français', en:'English'}" tags="['foo', 'bar', 'baz']" />
-                    <Command code="test" messages="{fr:'Français', en:'English'}" tags="['foo', 'bar', 'baz']" />
-                    <Command code="test" messages="{fr:'Français', en:'English'}" tags="['foo', 'bar', 'baz']" />
+                    <Command v-for="(command, key) in commands" :key=key :name=key :code=command.code :tags=command.tags />
                 </tbody>
 
             </table>
         </section>
 
         <footer>
-            <a href="https://twitter.com/zessx">Made with ♥ by @zessx</a> • <a href="https://github.com/zessx/unix-cheat-sheet">Github</a> • <a href="http://opensource.org/licenses/MIT">Licence MIT</a>
+            <a href="https://github.com/zessx/unix-cheat-sheet" target="_blank">{{ $t("message.made_with_love") }} @zessx</a>
         </footer>
     </div>
 </template>
@@ -50,8 +40,37 @@ import Command from './components/Command.vue'
 
 export default {
     name: 'app',
+
     components: {
         Command
+    },
+
+    filters: {
+        uppercase: value => {
+            return value.toUpperCase()
+        }
+    },
+
+    methods: {
+    },
+
+    data() {
+        return {
+            langs: ['fr', 'en'],
+            commands: []
+        }
+    },
+
+    mounted() {
+        fetch('commands.json')
+        .then(response => {
+            if (response.status == 200) {
+                return response.json()
+            }
+        })
+        .then(data => {
+            this.commands = data
+        })
     }
 }
 </script>
@@ -70,10 +89,36 @@ export default {
     overflow-y: scroll;
 }
 
+.en,
+.fr {
+    display: none;
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    background: #efefef;
+    overflow-y: scroll;
+}
+
+body.en,
+body.fr {
+    display: block;
+}
+body.en .en,
+body.fr .fr {
+    display: block;
+}
+body.en [data-lang="en"],
+body.fr [data-lang="fr"] {
+    color: #efefef;
+    background: #333;
+}
 
 section {
     position: relative;
-    width: 100%;
+    width: 800px;
     margin: 0 auto;
     padding: 25px;
 }
@@ -100,6 +145,7 @@ h1 {
     border-radius: 0 0 5px 5px;
     color: #333333;
     background: #efefef;
+    user-select: none;
 }
 
 [data-lang]:hover,
@@ -201,7 +247,7 @@ footer a:focus {
     color: darken(#efefef, 20%);
 }
 
-@media all and(min-width: 820px) {
+@media all and (min-width: 820px) {
     section {
         width: 800px;
     }

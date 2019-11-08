@@ -1,15 +1,30 @@
 import Vue from 'vue'
 import VueResource from 'vue-resource'
+import VueI18n from 'vue-i18n'
 import App from './App.vue'
-import yaml from 'js-yaml'
 
 Vue.use(VueResource)
+Vue.use(VueI18n)
 
 Vue.config.productionTip = false
 
+const locales = ['fr', 'en']
+let messages = {}
+
+locales.forEach((locale) => {
+  messages[locale] = require('./locales/'+ locale +'.json')
+})
+
+const i18n = new VueI18n({
+  locale: locales[0],
+  messages
+})
+
 new Vue({
-  render: h => h(App),
+  i18n,
+  render: h => h(App)
 }).$mount('#app')
+
 
 // String.prototype.removeAccents = function() {
 //   var r = this.toLowerCase();
